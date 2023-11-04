@@ -23,7 +23,6 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { Heading } from "@/components/ui/heading"
 import { AlertModal } from "@/components/modals/alert-modal"
-import ImageUpload from "@/components/ui/image-upload"
 
 const formSchema = z.object({
   name: z.string().min(1),
@@ -55,8 +54,7 @@ export const ColorForm: React.FC<ColorFormProps> = ({
   const form = useForm<ColorFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: initialData || {
-      name: '',
-      value: ''
+      name: ''
     }
   });
 

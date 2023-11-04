@@ -48,7 +48,7 @@ export async function POST(
         
         return NextResponse.json(billboard);
     }catch(error) {
-        console.log('[STORES_POST]', error)
+        console.log('[BILLBOARDS_POST]', error)
         return new NextResponse("Internal error", {status: 500});
     }   
 }
@@ -70,7 +70,7 @@ export async function GET(
         
         return NextResponse.json(billboards);
     }catch(error) {
-        console.log('[STORES_POST]', error)
+        console.log('[BILLBOARDS_GET]', error)
         return new NextResponse("Internal error", {status: 500});
     }   
 }
